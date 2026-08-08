@@ -110,6 +110,25 @@ body{
   margin-bottom:44px;
 }
 .hero-lede strong{color:var(--ink);font-weight:500}
+  .hero-top{
+  display:flex;
+  align-items:center;
+  gap:34px;
+  margin-bottom:30px;
+}
+.hero-id{flex:1;min-width:0}
+.hero-id .hero-latin{margin-bottom:0}
+.portrait{
+  flex-shrink:0;
+  width:126px;
+  height:126px;
+  border-radius:50%;
+  object-fit:cover;
+  border:1px solid var(--rule);
+  filter:grayscale(1) contrast(1.03);
+  transition:filter .55s ease;
+}
+.portrait:hover{filter:grayscale(0) contrast(1)}
 
 /* 三根支柱 */
 .pillars{
@@ -291,6 +310,8 @@ body{
   .entry-date{padding-top:0;margin-bottom:9px}
   .skill-label{margin-bottom:7px}
   .section-head .en{display:none}
+  .hero-top{gap:20px}
+  .portrait{width:88px;height:88px}
 }
 
 @media print{
@@ -316,9 +337,14 @@ body{
 <div class="wrap">
 
   <header class="hero">
-    <div class="hero-eyebrow">求职意向 · 市场营销</div>
-    <h1>赵雨荷</h1>
-    <div class="hero-latin">Zhao Yuhe &nbsp;/&nbsp; Rain</div>
+    <div class="hero-top">
+      <div class="hero-id">
+        <div class="hero-eyebrow">求职意向 · 市场营销</div>
+        <h1>赵雨荷</h1>
+        <div class="hero-latin">Zhao Yuhe &nbsp;/&nbsp; Rain</div>
+      </div>
+      <img class="portrait" src="photo.jpg" alt="赵雨荷">
+    </div>
 
     <p class="hero-lede">
       曼彻斯特大学国际时尚营销硕士，本科修读<strong>数字化营销</strong>与<strong>法学</strong>双学位。
