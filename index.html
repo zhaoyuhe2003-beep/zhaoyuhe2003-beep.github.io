@@ -112,19 +112,15 @@ body{
 .hero-lede strong{color:var(--ink);font-weight:500}
   .hero-top{
   display:flex;
-  align-items:center;
-  gap:34px;
-  margin-bottom:30px;
+  align-items:flex-end;
+  gap:40px;
 }
 .hero-id{flex:1;min-width:0}
-.hero-id .hero-latin{margin-bottom:0}
 .portrait{
   flex-shrink:0;
-  width:126px;
-  height:126px;
-  border-radius:50%;
-  object-fit:cover;
-  border:1px solid var(--rule);
+  display:block;
+  width:158px;
+  height:158px;
 }
 
 /* 三根支柱 */
@@ -307,8 +303,8 @@ body{
   .entry-date{padding-top:0;margin-bottom:9px}
   .skill-label{margin-bottom:7px}
   .section-head .en{display:none}
-  .hero-top{gap:20px}
-  .portrait{width:88px;height:88px}
+  .hero-top{flex-direction:column-reverse;align-items:flex-start;gap:0}
+  .portrait{width:92px;height:92px;margin-bottom:22px}
 }
 
 @media print{
@@ -339,15 +335,15 @@ body{
         <div class="hero-eyebrow">求职意向 · 市场营销</div>
         <h1>赵雨荷</h1>
         <div class="hero-latin">Zhao Yuhe &nbsp;/&nbsp; Rain</div>
-      </div>
-      <img class="portrait" src="photo.jpg" alt="赵雨荷">
-    </div>
 
-    <p class="hero-lede">
-      曼彻斯特大学国际时尚营销硕士，本科修读<strong>数字化营销</strong>与<strong>法学</strong>双学位。
-      从英国学生公寓的短视频矩阵，到独立操盘 50+ 场 IP 衍生品团购，
-      我习惯把内容当成一条<strong>从种草到转化的完整链路</strong>来搭建，并用数据反过来校准每一次创意判断。
-    </p>
+        <p class="hero-lede">
+          曼彻斯特大学国际时尚营销硕士，本科修读<strong>数字化营销</strong>与<strong>法学</strong>双学位。
+          从英国学生公寓的短视频矩阵，到独立操盘 50+ 场 IP 衍生品团购，
+          我习惯把内容当成一条<strong>从种草到转化的完整链路</strong>来搭建，并用数据反过来校准每一次创意判断。
+        </p>
+      </div>
+      <img class="portrait" src="photo.png" alt="赵雨荷">
+    </div>
 
     <div class="pillars">
       <div class="pillar">
@@ -400,7 +396,7 @@ body{
       <div class="entry-date">2022.09 — 2025.06</div>
       <div>
         <div class="entry-title">南昌航空大学 · 学士</div>
-        <div class="entry-sub">法学（第二学位）</div>
+        <div class="entry-sub">法学</div>
         <p class="courses">民法总论 · 物权法 · 合同法 · 企业法</p>
       </div>
     </div>
