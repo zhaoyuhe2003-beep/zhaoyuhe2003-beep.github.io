@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>赵雨荷 — 市场营销 / 内容策略</title>
+<meta name="description" content="赵雨荷，曼彻斯特大学国际时尚营销硕士。多平台内容创意策划、数据化效果复盘、AI 营销工具应用。">
+<style>
+:root{
+  --paper:#F5F3EE;
+  --paper-lift:#FBFAF7;
+  --ink:#1F1D1A;
+  --ink-soft:#5C574E;
+  --ink-faint:#8B857A;
+  --rule:#E2DED4;
+  --accent:#C15F3C;
+
+  --serif:"Songti SC","STSong","SimSun",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{
+  max-width:760px;
+  margin:0 auto;
+  padding:0 28px 96px;
+}
+
+/* ---------- 顶部导航 ---------- */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(245,243,238,.88);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.nav-inner{
+  max-width:760px;
+  margin:0 auto;
+  padding:13px 28px;
+  display:flex;
+  gap:22px;
+  align-items:center;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav-name{
+  font-family:var(--serif);
+  font-size:16px;
+  letter-spacing:.06em;
+  margin-right:auto;
+  white-space:nowrap;
+}
+.nav a{
+  color:var(--ink-soft);
+  text-decoration:none;
+  font-size:13px;
+  white-space:nowrap;
+  padding:2px 0;
+  border-bottom:1px solid transparent;
+  transition:color .18s,border-color .18s;
+}
+.nav a:hover,.nav a:focus-visible{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* ---------- 首屏 ---------- */
+.hero{padding:76px 0 56px}
+
+.hero-eyebrow{
+  font-size:11px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  margin-bottom:22px;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:54px;
+  font-weight:400;
+  letter-spacing:.1em;
+  line-height:1.15;
+  margin-bottom:8px;
+}
+.hero-latin{
+  font-size:13px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  margin-bottom:30px;
+}
+.hero-lede{
+  font-size:16.5px;
+  line-height:1.9;
+  color:var(--ink-soft);
+  max-width:56ch;
+  margin-bottom:44px;
+}
+.hero-lede strong{color:var(--ink);font-weight:500}
+
+/* 三根支柱 */
+.pillars{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--rule);
+}
+.pillar{
+  padding:22px 20px 24px 0;
+  border-right:1px solid var(--rule);
+}
+.pillar:last-child{border-right:none;padding-right:0}
+.pillar:not(:first-child){padding-left:20px}
+.pillar-zh{
+  font-family:var(--serif);
+  font-size:18px;
+  letter-spacing:.06em;
+  line-height:1.5;
+  margin-bottom:9px;
+}
+.pillar-en{
+  font-size:10.5px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+
+/* ---------- 区块 ---------- */
+.section{padding-top:62px}
+
+.section-head{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  border-bottom:1px solid var(--ink);
+  padding-bottom:11px;
+  margin-bottom:6px;
+}
+.section-head h2{
+  font-family:var(--serif);
+  font-size:22px;
+  font-weight:400;
+  letter-spacing:.14em;
+}
+.section-head .en{
+  font-size:10.5px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  margin-left:auto;
+}
+
+/* ---------- 条目 ---------- */
+.entry{
+  display:grid;
+  grid-template-columns:118px 1fr;
+  gap:0 26px;
+  padding:28px 0;
+  border-bottom:1px solid var(--rule);
+}
+.entry:last-child{border-bottom:none}
+
+.entry-date{
+  font-size:12.5px;
+  color:var(--ink-faint);
+  letter-spacing:.03em;
+  padding-top:4px;
+  line-height:1.6;
+}
+
+.entry-title{
+  font-family:var(--serif);
+  font-size:19px;
+  letter-spacing:.05em;
+  line-height:1.5;
+  margin-bottom:3px;
+}
+.entry-sub{
+  font-size:13.5px;
+  color:var(--accent);
+  margin-bottom:14px;
+  letter-spacing:.02em;
+}
+
+.points{list-style:none}
+.points li{
+  position:relative;
+  padding-left:15px;
+  margin-bottom:11px;
+  color:var(--ink-soft);
+  font-size:14.5px;
+  line-height:1.85;
+}
+.points li:last-child{margin-bottom:0}
+.points li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:12px;
+  width:5px;
+  height:1px;
+  background:var(--ink-faint);
+}
+.points .lead{color:var(--ink);font-weight:500}
+.m{color:var(--accent);font-weight:500;font-style:normal}
+
+.courses{
+  font-size:13px;
+  color:var(--ink-faint);
+  line-height:1.8;
+}
+
+/* ---------- 能力 ---------- */
+.skill{
+  display:grid;
+  grid-template-columns:118px 1fr;
+  gap:0 26px;
+  padding:22px 0;
+  border-bottom:1px solid var(--rule);
+}
+.skill:last-child{border-bottom:none}
+.skill-label{
+  font-family:var(--serif);
+  font-size:15px;
+  letter-spacing:.08em;
+  padding-top:2px;
+}
+.skill-body{color:var(--ink-soft);font-size:14.5px}
+
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
+.tag{
+  font-size:12.5px;
+  color:var(--ink-soft);
+  background:var(--paper-lift);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  padding:3px 10px;
+}
+
+/* ---------- 页脚 ---------- */
+.foot{
+  margin-top:70px;
+  padding-top:26px;
+  border-top:1px solid var(--ink);
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 20px;
+  align-items:baseline;
+  font-size:12.5px;
+  color:var(--ink-faint);
+}
+.foot .up{margin-left:auto;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--rule)}
+.foot .up:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* ---------- 入场动画 ---------- */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width:640px){
+  .wrap{padding:0 20px 70px}
+  .nav-inner{padding:12px 20px;gap:16px}
+  .hero{padding:52px 0 40px}
+  .hero h1{font-size:38px}
+  .hero-lede{font-size:15.5px}
+  .pillars{grid-template-columns:1fr}
+  .pillar{border-right:none;border-bottom:1px solid var(--rule);padding:17px 0}
+  .pillar:not(:first-child){padding-left:0}
+  .pillar:last-child{border-bottom:none}
+  .entry,.skill{grid-template-columns:1fr;gap:0}
+  .entry-date{padding-top:0;margin-bottom:9px}
+  .skill-label{margin-bottom:7px}
+  .section-head .en{display:none}
+}
+
+@media print{
+  .nav,.foot .up{display:none}
+  body{background:#fff}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-name">赵雨荷</span>
+    <a href="#education">教育</a>
+    <a href="#experience">实习</a>
+    <a href="#projects">项目</a>
+    <a href="#campus">校园</a>
+    <a href="#skills">能力</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-eyebrow">求职意向 · 市场营销</div>
+    <h1>赵雨荷</h1>
+    <div class="hero-latin">Zhao Yuhe &nbsp;/&nbsp; Rain</div>
+
+    <p class="hero-lede">
+      曼彻斯特大学国际时尚营销硕士，本科修读<strong>数字化营销</strong>与<strong>法学</strong>双学位。
+      从英国学生公寓的短视频矩阵，到独立操盘 50+ 场 IP 衍生品团购，
+      我习惯把内容当成一条<strong>从种草到转化的完整链路</strong>来搭建，并用数据反过来校准每一次创意判断。
+    </p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-zh">多平台内容<br>创意策划</div>
+        <div class="pillar-en">Content Strategy</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-zh">数据化<br>效果复盘</div>
+        <div class="pillar-en">Performance Review</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-zh">AI 营销<br>工具应用</div>
+        <div class="pillar-en">AI Toolchain</div>
+      </div>
+    </div>
+
+    <!-- 以后想加联系方式，把下面这段的注释符号删掉，填进去就行
+    <div class="contact">
+      <span><b>邮箱</b><a href="mailto:">你的邮箱</a></span>
+    </div>
+    -->
+  </header>
+
+  <!-- ============ 教育背景 ============ -->
+  <section class="section reveal" id="education">
+    <div class="section-head">
+      <h2>教育背景</h2>
+      <span class="en">Education</span>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">2025.09 — 2026.12</div>
+      <div>
+        <div class="entry-title">曼彻斯特大学 · 硕士</div>
+        <div class="entry-sub">国际时尚营销 MSc International Fashion Marketing</div>
+        <p class="courses">国际时尚营销 · 消费者行为学 · 时尚营销传播 · 战略性品牌管理 · 研究方法</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">2021.09 — 2025.06</div>
+      <div>
+        <div class="entry-title">南昌航空大学 · 学士</div>
+        <div class="entry-sub">工商管理（数字化营销）</div>
+        <p class="courses">市场营销学 · 市场调研与预测 · 统计学 · 营销工程 · 广告策划与管理 · 数字营销</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">2022.09 — 2025.06</div>
+      <div>
+        <div class="entry-title">南昌航空大学 · 学士</div>
+        <div class="entry-sub">法学（第二学位）</div>
+        <p class="courses">民法总论 · 物权法 · 合同法 · 企业法</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 实习经历 ============ -->
+  <section class="section reveal" id="experience">
+    <div class="section-head">
+      <h2>实习经历</h2>
+      <span class="en">Experience</span>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">2025.09 — 2026.08<br>英国 · 曼彻斯特</div>
+      <div>
+        <div class="entry-title">Downing Students</div>
+        <div class="entry-sub">品牌营销实习生</div>
+        <ul class="points">
+          <li><span class="lead">内容产出</span>　主导旗下 Square Gardens 公寓宣传短视频从脚本、拍摄到剪辑调色、字幕配乐的全流程，累计产出成片 <i class="m">8+ 条</i>。</li>
+          <li><span class="lead">平台传播</span>　针对小红书、抖音与 Instagram 的推流机制做差异化二次剪辑，单条最高触达英国留学生 <i class="m">5000+ 人次</i>。</li>
+          <li><span class="lead">品牌推广</span>　内容矩阵配合新生社群分发，跟踪各平台播放与咨询数据调整内容方向，助力房源曝光与租房咨询转化率提升 <i class="m">30%</i>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">2025.01 — 2025.04</div>
+      <div>
+        <div class="entry-title">平顶山天安煤业股份有限公司八矿</div>
+        <div class="entry-sub">商务运营实习生</div>
+        <ul class="points">
+          <li><span class="lead">销务协同</span>　配合主管跟进全链路销售，对接采购客户，落地订单履约全流程，4 个月内协助完成订单签约 <i class="m">20+ 单</i>。</li>
+          <li><span class="lead">客户对接</span>　协助搭建客户服务响应机制，邮件、微信、电话多通道及时处理咨询，实习期间客户投诉率 <i class="m">0</i>，咨询响应满意度 <i class="m">100%</i>。</li>
+          <li><span class="lead">数据整理</span>　按月汇总销售台账，Excel 分类分析产销数据，输出行情参考报表，为团队提供数据支撑辅助决策。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">2023.10 — 2023.12</div>
+      <div>
+        <div class="entry-title">中国邮政集团有限公司河南分公司</div>
+        <div class="entry-sub">市场推广实习生</div>
+        <ul class="points">
+          <li><span class="lead">客群接待</span>　线下接待到访客户 <i class="m">200+ 人次</i>，梳理储蓄理财业务标准化指引话术，协助优化柜台业务办理流程，提升线下服务效率。</li>
+          <li><span class="lead">业务协同</span>　协助落地网点日常营销推广，梳理线下获客路径，沉淀可复用的线下客户沟通 SOP。</li>
+          <li><span class="lead">产品拓客</span>　参与策划线下网点营销活动，主动挖掘客户理财需求，精准推介金融产品，成功转化潜在理财意向客户 <i class="m">10+ 人</i>。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 项目经历 ============ -->
+  <section class="section reveal" id="projects">
+    <div class="section-head">
+      <h2>项目经历</h2>
+      <span class="en">Projects</span>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">2022.01 — 2023.06</div>
+      <div>
+        <div class="entry-title">跨境零售与私域运营</div>
+        <ul class="points">
+          <li><span class="lead">全盘业务搭建</span>　负责韩泰明星周边品类的跨境代购全链路，打通选品至分发体系，实现月均订单 <i class="m">200+</i>、客单价 <i class="m">300+ 元</i>。</li>
+          <li><span class="lead">核心用户运营</span>　通过小红书、抖音与微信社群建立种草与预售闭环，主导用户全生命周期运营，复购率 <i class="m">15%+</i>。</li>
+          <li><span class="lead">服务流程规范</span>　建立客户档案与 24h 内响应 SOP，高效解决海关及售后问题，客诉率 <i class="m">&lt;3%</i>，客户满意度 <i class="m">95%+</i>。</li>
+          <li><span class="lead">供应链精益化</span>　对比筛选多家转运与快递商，通过策略性议价与时效优化，降低采购成本 <i class="m">10%+</i>，缩短发货周期 <i class="m">3–5 天</i>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">2022.01 — 2023.01</div>
+      <div>
+        <div class="entry-title">IP 衍生品社群营销项目</div>
+        <ul class="points">
+          <li><span class="lead">项目独立操盘</span>　独立操盘 <i class="m">50+ 次</i> IP 衍生品团购，单团平均销售额 <i class="m">1 万元</i>，沉淀全流程闭环营销 SOP。</li>
+          <li><span class="lead">精准私域营销</span>　在小红书、抖音、微博、微信群完成种草文案与预售，单团最高转化率 <i class="m">15%+</i>、复购率 <i class="m">25%</i>。</li>
+          <li><span class="lead">供应商管理</span>　深度对接工厂、印刷及物流商，策略性议价降本 <i class="m">10%+</i>，优化发货流程，好评率超 <i class="m">95%</i>。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 校园经历 ============ -->
+  <section class="section reveal" id="campus">
+    <div class="section-head">
+      <h2>校园经历</h2>
+      <span class="en">Campus</span>
+    </div>
+
+    <div class="entry">
+      <div class="entry-date">2021.10 — 2023.06</div>
+      <div>
+        <div class="entry-title">南昌航空大学学生就业服务工作委员会</div>
+        <div class="entry-sub">宣传部 · 部委</div>
+        <ul class="points">
+          <li><span class="lead">内容运营</span>　编辑就业活动微信公众号推文，独立产出图文内容 <i class="m">20+ 篇</i>，单篇平均阅读量 <i class="m">800+</i>，覆盖全校学生群体。</li>
+          <li><span class="lead">视觉设计</span>　使用 PS、Canva 等设计软件制作春招、秋招系列宣传海报 <i class="m">20+ 张</i>，适配线上线下多渠道传播。</li>
+          <li><span class="lead">活动统筹</span>　参与 <i class="m">10+ 场</i>校园招聘会宣传推广与现场执行，其中春招、秋招场均到场学生 <i class="m">1000+ 人</i>，协助多部门完成活动执行。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 核心能力 ============ -->
+  <section class="section reveal" id="skills">
+    <div class="section-head">
+      <h2>核心能力</h2>
+      <span class="en">Capabilities</span>
+    </div>
+
+    <div class="skill">
+      <div class="skill-label">软件技能</div>
+      <div class="skill-body">
+        熟练使用办公与数据分析、设计及视频剪辑类工具，持有计算机二级、普通话二甲证书。
+        <div class="tags">
+          <span class="tag">Office</span><span class="tag">SPSS</span><span class="tag">SQL</span>
+          <span class="tag">Photoshop</span><span class="tag">Canva</span><span class="tag">Premiere Pro</span><span class="tag">剪映</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-label">外语能力</div>
+      <div class="skill-body">雅思 6.5，一年英国留学经历，英语可作为工作语言使用，具备中英双语内容创作能力。</div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-label">AI 技能</div>
+      <div class="skill-body">
+        持曼彻斯特大学 AI Marketing Masterclass 认证。以 AI 工具完成图文素材、短视频与双语营销文案创作，并辅助市场分析。
+        <div class="tags">
+          <span class="tag">ChatGPT</span><span class="tag">Claude</span><span class="tag">Gemini</span>
+          <span class="tag">Midjourney</span><span class="tag">Runway</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-label">平台认知</div>
+      <div class="skill-body">
+        小红书、抖音、B 站、微博等内容平台深度用户，熟悉各平台内容分区、用户结构与传播机制差异。
+        <div class="tags">
+          <span class="tag">小红书</span><span class="tag">抖音</span><span class="tag">B 站</span><span class="tag">微博</span><span class="tag">微信生态</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>赵雨荷 · 市场营销 / 内容策略</span>
+    <span>最近更新 2026.08</span>
+    <a class="up" href="#">回到顶部</a>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var items = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    items.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  items.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
