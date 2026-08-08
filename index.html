@@ -113,14 +113,17 @@ body{
   .hero-top{
   display:flex;
   align-items:flex-end;
-  gap:40px;
+  gap:48px;
 }
 .hero-id{flex:1;min-width:0}
 .portrait{
   flex-shrink:0;
   display:block;
-  width:158px;
-  height:158px;
+  width:240px;
+  align-self:stretch;
+  margin-top:41px;
+  object-fit:cover;
+  object-position:50% 0;
 }
 
 /* 三根支柱 */
@@ -304,7 +307,7 @@ body{
   .skill-label{margin-bottom:7px}
   .section-head .en{display:none}
   .hero-top{flex-direction:column-reverse;align-items:flex-start;gap:0}
-  .portrait{width:92px;height:92px;margin-bottom:22px}
+  .portrait{width:132px;height:192px;align-self:auto;margin-top:0;margin-bottom:22px}
 }
 
 @media print{
